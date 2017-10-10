@@ -9,9 +9,18 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var red: UISlider!
+    @IBOutlet weak var green: UISlider!
+    @IBOutlet weak var blue: UISlider!
+    
 
+    @IBAction func bgcolor(_ sender: Any) {
+        view.backgroundColor = UIColor(colorLiteralRed: red.value, green: green.value, blue: blue.value, alpha: 1)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 
